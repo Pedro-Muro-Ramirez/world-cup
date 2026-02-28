@@ -9,7 +9,7 @@ app.use(express.json())
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') ?? ['http://localhost:5173']
 app.use(cors({ origin: allowedOrigins }))
 
-const PORT = 4000
+const PORT = process.env.PORT ?? 4000
 
 app.use("/api/nations", nationsRouter)
 
