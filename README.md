@@ -34,3 +34,59 @@ https://world-cup-livid.vercel.app
 **Deployment**
 - Docker (Node 20 Alpine)
 - Railway
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- A [Supabase](https://supabase.com) project with a `nations` table
+
+### Environment Variables
+
+Create a `.env` file in `server/`:
+
+```env
+SUPABASE_URL=your_supabase_url
+SUPABASE_SERVICE_KEY=your_service_key
+PORT=4000
+ALLOWED_ORIGINS=http://localhost:5173
+```
+
+Optionally, create a .env in the root for the frontend:
+
+```
+VITE_API_URL=http://localhost:4000
+```
+### Running Locally
+
+Both processes must run concurrently.
+
+Backend (port 4000):
+```
+cd server
+npm install
+npm run dev
+```
+
+Frontend (port 5173):
+```
+npm install
+npm run dev
+```
+
+### API Endpoints
+| Method | Endpoint              | Description                          |
+|--------|-----------------------|--------------------------------------|
+| GET    | /api/nations          | Returns all qualifying nations       |
+| GET    | /api/nations/:code    | Returns a single nation by FIFA code |
+
+### Deployment
+
+The backend is containerized with Docker and deployed on Railway. The PORT environment variable is set automatically by Railway.
+```
+docker build -t world-cup-server .
+docker run -p 4000:4000 world-cup-server
+```
