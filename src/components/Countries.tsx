@@ -51,7 +51,7 @@ export default function Countries() {
     return (
         <section className="w-full">
             {/* Confederation filter dropdown — updates the ?type= query param */}
-            <div className="flex justify-end px-8 py-6">
+            <div className="flex justify-end px-4 sm:px-8 py-6">
                 <div className="relative">
                     <select
                         className="appearance-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-transparent px-5 py-3 pr-10 rounded-md shadow-md cursor-pointer focus:outline-none"
@@ -74,7 +74,7 @@ export default function Countries() {
             </div>
 
             {/* Country card grid */}
-            <div className="grid max-w-7xl mx-auto grid-cols-4 gap-20">
+            <div className="grid max-w-7xl mx-auto px-4 sm:px-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12">
                 {countryElem}
             </div>
         </section>

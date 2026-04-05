@@ -8,10 +8,10 @@ export default function CountryInfo() {
 
     return (
         <section className="w-full">
-            <div className="mx-auto max-w-6xl px-8 py-16 w-full">
-                <Link to="/" className="inline-flex items-center gap-2 mb-12 px-6 py-2 rounded-md shadow-md bg-white dark:bg-gray-800 text-sm font-medium text-gray-900 dark:text-white">← Back</Link>
-                <div className="flex items-center gap-24">
-                    <img src={`https://flagcdn.com/${country.flagCode}.svg`} className="w-[560px] object-contain"/>
+            <div className="mx-auto max-w-6xl px-4 sm:px-8 py-10 sm:py-16 w-full">
+                <Link to="/" className="inline-flex items-center gap-2 mb-10 sm:mb-12 px-6 py-2 rounded-md shadow-md bg-white dark:bg-gray-800 text-sm font-medium text-gray-900 dark:text-white">← Back</Link>
+                <div className="flex flex-col md:flex-row items-center gap-10 md:gap-24">
+                    <img src={`https://flagcdn.com/${country.flagCode}.svg`} className="w-full md:w-[560px] object-contain"/>
                     <div className="text-gray-900 dark:text-white">
                         <h1 className="text-3xl mb-6"><span className="font-extrabold">Country:</span> {country?.name}</h1>
                         <p><span className="font-bold">Confederation:</span> {country.region}</p>
