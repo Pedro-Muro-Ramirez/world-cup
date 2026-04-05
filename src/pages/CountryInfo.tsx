@@ -8,8 +8,8 @@ export default function CountryInfo() {
 
     return (
         <section className="w-full">
-            <div className="mx-auto max-w-6xl px-8 w-full">
-                <Link to="/" className="inline-block mb-12 text-sm font-medium text-gray-900 dark:text-white hover:underline">Back to countries list</Link>
+            <div className="mx-auto max-w-6xl px-8 py-16 w-full">
+                <Link to="/" className="inline-flex items-center gap-2 mb-12 px-6 py-2 rounded-md shadow-md bg-white dark:bg-gray-800 text-sm font-medium text-gray-900 dark:text-white">← Back</Link>
                 <div className="flex items-center gap-24">
                     <img src={`https://flagcdn.com/${country.flagCode}.svg`} className="w-[560px] object-contain"/>
                     <div className="text-gray-900 dark:text-white">
