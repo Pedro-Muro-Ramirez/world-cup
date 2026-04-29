@@ -5,7 +5,7 @@ import {
   RouterProvider
 } from "react-router-dom"
 
-import Countries from "./components/Countries.tsx"
+import HomePage from "./pages/Home.tsx"
 import CountryInfo from "./pages/CountryInfo.tsx"
 import { countryLoader } from "./components/countryLoader.tsx"
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Countries />
+        element: <HomePage />
       },
       {
         path: "/:postId",
