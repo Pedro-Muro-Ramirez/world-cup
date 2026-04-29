@@ -31,7 +31,7 @@ export default function MainLayout() {
     return (
         <div className="min-h-screen flex flex-col">
             <Navbar isDark={isDark} onToggle={toggleDark} />
-            <main className="flex-1 flex items-start bg-gray-50 dark:bg-gray-900">
+            <main className="flex-1 items-start bg-gray-50 dark:bg-gray-900">
                 <Outlet />
             </main>
         </div>
